@@ -7,7 +7,7 @@ _Diabetes is a chronic disease where the pancreas either does not produce insuli
 The dataset used is originally from the National Institute of Diabetes & Digestive & Kidney Disease. The objective when they collected this data was to predict based on diagnostic measurements whether a patient has diabetes.
 
 * [Kaggle Website Source](https://www.kaggle.com/datasets/mathchi/diabetes-data-set)
-* [Kaggle Dataset](file:///Users/sarahberkin/Downloads/diabetes.csv)
+* [Kaggle Dataset](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/data/diabetes.csv)
 
 <h2>2. Data Cleaning</h2>
 
@@ -21,9 +21,18 @@ The dataset used is originally from the National Institute of Diabetes & Digesti
 [EDA Report](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/Sarah.Berkin--EDA-Capstone%202%20Diabetes%20Project.ipynb)
 
 * The 3 independent variables which had the lowest p-value from the Pearson Correlation Coefficient test were 1) Glucose, 2) Insulin, and 3) BMI
-![Glucose P-value](file:///Users/sarahberkin/Desktop/Screenshot%202025-02-28%20at%202.19.07%E2%80%AFPM.png)
-![Insulin P-value](file:///Users/sarahberkin/Desktop/Screenshot%202025-02-28%20at%202.19.26%E2%80%AFPM.png)
-![BMI P-value](file:///Users/sarahberkin/Desktop/Screenshot%202025-02-28%20at%202.19.42%E2%80%AFPM.png)
+
+**Glucose P-value**
+
+![Glucose P-value](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/Glucose%20Pearson%20Coefficient.png)
+
+**Insulin P-value**
+
+![Insulin P-value](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/Insulin%20Pearson%20Coefficient.png)
+
+**BMI P-value**
+
+![BMI P-value](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/BMI%20Pearson%20Coefficient.png)
 
 <h2>Pre-Processing</h2>
 
