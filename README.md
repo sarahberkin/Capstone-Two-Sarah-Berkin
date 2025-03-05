@@ -6,7 +6,7 @@ _Diabetes is a chronic disease where the pancreas either does not produce insuli
 The dataset used is originally from the National Institute of Diabetes & Digestive & Kidney Disease. The objective when they collected this data was to predict based on diagnostic measurements whether a patient has diabetes.
 * [Kaggle Website Source]([url](https://www.kaggle.com/datasets/mathchi/diabetes-data-set))
 * [Kaggle Dataset]([url](file:///users/sarahberkin/Downloads/diabetes.csv))
-##**2. Data Cleaning**
+<h2>2. Data Cleaning<h2>
 [Data Cleaning Report]([url](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/Capstone%202%20Diabetes%20Project.ipynb))
 * **Problem 1:** Inconsistencies in completeness of data entry. **Solution:** Null values were filled in with the mean or median, as appropriate for the various independent variables.
 * **Problem 2:** Outliers were present throughout the independent variable values. **Solution:** Initial visualizations were done with histograms in order to get a sense of how far the distribution might be from normal. Outliers were later explored further using boxplots, then severe outliers were trimmed from the data.
