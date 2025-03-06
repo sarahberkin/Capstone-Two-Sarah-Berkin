@@ -16,9 +16,15 @@ The dataset used is originally from the National Institute of Diabetes & Digesti
 * **Problem 1:** Inconsistencies in completeness of data entry. **Solution:** Null values were filled in with the mean or median, as appropriate for the various independent variables.
 * **Problem 2:** Outliers were present throughout the independent variable values. **Solution:** Initial visualizations were done with histograms in order to get a sense of how far the distribution might be from normal. Outliers were later explored further using boxplots, then severe outliers were trimmed from the data.
 
+![Boxplot](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/OutliersinBoxplot.png)
+
 <h2>3. EDA</h2>
 
 [EDA Report](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/Sarah.Berkin--EDA-Capstone%202%20Diabetes%20Project.ipynb)
+
+* A heatmap was generated to visualize correlations between the variables
+
+![Heatmap](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/CorrelationHeatmap.png)
 
 * The 3 independent variables which had the lowest p-value from the Pearson Correlation Coefficient test were 1) Glucose, 2) Insulin, and 3) BMI
 
