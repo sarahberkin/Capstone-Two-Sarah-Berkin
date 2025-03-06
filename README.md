@@ -22,6 +22,10 @@ The dataset used is originally from the National Institute of Diabetes & Digesti
 
 [EDA Report](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/Sarah.Berkin--EDA-Capstone%202%20Diabetes%20Project.ipynb)
 
+* Histograms were created to visualize the distribution of the variables after outliers were trimmed
+
+![Histograms](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/Histograms.png)
+
 * A heatmap was generated to visualize correlations between the variables
 
 ![Heatmap](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/CorrelationHeatmap.png)
