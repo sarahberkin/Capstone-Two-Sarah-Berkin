@@ -52,47 +52,61 @@ The dataset used is originally from the National Institute of Diabetes & Digesti
 
 <h2>5. Modeling</h2>
 
-_I used [scikit-learn](https://scikit-learn.org/stable/) for training my recommendation system. Based on the fact that my dependent variable, whether or not a person has diabetes, is a binary Yes/No, I determined that the 2 algorithms which made the most sense are 1) Logistic Regression, and 2) Support Vector Machine (SVM)._
+_I used [scikit-learn](https://scikit-learn.org/stable/) for training my recommendation system. Based on the fact that my dependent variable, whether or not a person has diabetes, is a binary Yes/No, I determined that the 3 algorithms which made the most sense are 1) Logistic Regression, 2) Support Vector Machine (SVM), & 3) Gradient Boosting Classifier._
 
-**A.** [Modeling Report with Train Test Split](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/Sarah.Berkin--Modeling.Revised-Capstone%202%20Diabetes%20Project.ipynb)
+[Final Modeling Report with 3 Algorithm types](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/S.Berkin--Final-KFold-Capstone%202%20Diabetes%20Project.ipynb)
+
+----
 
 I first ran each algorithm by performing a train test split on the data to create training and testing clusters of the data. 
 
-* **Mean cross-validation & standard deviation when using Train Test Split**
+**Mean cross-validation & standard deviation when using Train Test Split**
 
-* ![CV](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/CVscoresw-TTS.png)
+![CVLR](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/MeansLogReg.wTTS.png)
 
-* **Accuracy & ROC-AUC CV with Train Test Split**
+![CVNext2](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/MeansSVM.GBC.wTTS.png)
 
-* ![Modeling Report with TTS](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/modelresultswithTTS.png)
+**Accuracy & ROC-AUC CV with Train Test Split**
 
--------
+![Modeling Report with TTS](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/modelresultswithTTS.png)
 
-**B.** [Modeling Report with K Fold CV](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/S.Berkin--KFold-Capstone%202%20Diabetes%20Project.ipynb)
+-----
 
-I next ran the same 2 algorithms with K Fold cross validation to create clusters instead of train test split.
+I next ran the same algorithms with K Fold cross validation to create clusters instead of train test split.
 
-* **Mean cross-validation & standard deviation when using K Fold CV**
+**Mean cross-validation & standard deviation when using K Fold CV**
 
-* ![CV](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/CVwithKFold.png)
+![CV](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/3MeansWKFold.png)
 
-* **Accuracy & ROC-AUC CV with K Fold CV**
+**Accuracy & ROC-AUC CV with K Fold CV**
 
-* ![Modeling Report with K Fold Cross-Validation](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/modelresultsKFold.png)
+![Modeling Report with K Fold Cross-Validation](https://github.com/sarahberkin/Capstone-Two-Sarah-Berkin/blob/main/images/3modelresultsKFold.png)
 
 --------
 
 **Key Takeaways:**
-* Mean cross-validation scores are slightly higher when using Train Test Split vs K Fold CV
-* Accuracy is higher across the board when using Train Test Split vs K Fold CV
-* ROC-AUC CV scores are just slightly higher when using Train Test Split vs K Fold CV
-* If using Train Test Split, the SVM model shows slightly higher accuracy and ROC-AUC CV scores
-* If using K Fold CV, the Logistic Regression model shows slightly higher accuracy and ROC-AUC CV scores
 
-**Winning Model:**
-* For the sake of erring on the more conservative side, I will choose the Logistic Regression model using K Fold CV. K Fold CV helps guard against overfitting and makes sure the entire dataset is used for training and testing while validating unseen data.
+* When using Train, Test, Split– SVM has the best Accuracy score & Gradient Boosting Classifier comes in second.
+* When using Train, Test, Split– Gradient Boosting Classifier has the best ROC-AUC scores training scores, while SVM has the better ROC-AUC scores test scores.
+* When  using Train Test Split, there does not appear to be any scenario that Logistic Regression is the best choice.
+* When using K Fold Cross-Validation– Gradient Boosting Classifier has the best Accuracy & Logistic Regression comes in second.
+* When using K Fold Cross-Validation– Gradient Boosting Classifier has the best ROC-AUC scores, while Logistic Regression comes in second. 
+
+**Winning Model: Gradient Boosting Classifier with K Fold Cross-Validation** 
+
+* For the sake of erring on the more conservative side, I will choose the K Fold CV. K Fold CV helps guard against overfitting and makes sure the entire dataset is used for training and testing while validating unseen data.
+* Gradient Boosting Classifier model performed the best in both Accuracy & ROC-AUC CV.
+
+<h2>Recommended Applications</h2>
+
+Three recommended business objectives the predictive model developed in this project can support:
+
+* **Targeted Marketing Campaigns:** Businesses can use the model to identify individuals at higher risk of diabetes and create tailored health and wellness campaigns. For example, companies offering health-related products or services could promote specific offerings, such as nutritious meal plans, fitness programs, or medical devices, to this audience.
+* **Product Development & Innovation:** Companies in the healthcare and wellness industries could leverage the insights to develop new products that meet the needs of at-risk populations. This could include creating low-sugar food products, fitness tracking tools, or preventive health services, thereby opening new revenue streams.
+* **Enhanced Customer Segmentation:** Insurance companies could integrate the model into their risk assessment processes to better segment customers. This could lead to more accurate pricing of health insurance policies and the development of personalized health management programs that reduce overall claims costs.
 
 <h2>Future Improvements</h2>
 
-* In the future, I would love to expand this data set either by gathering new data in a similar manner or by merging it with similar existing ones. I believe the results would only be strengthened by having more data points to work off of.
-* I would also love to focus on the population of people who have diabetes to get more data directly from them. It could strengthen the results to have a more naturally balanced data set rather than needing to rely so heavily on dummy variables to balance the Yes / No ratio.
+* **Incorporate Additional Data:** Integrate more comprehensive datasets that include variables like family medical history, physical activity levels, and dietary habits.
+* **Address Class Imbalance:** Apply techniques such as SMOTE (Synthetic Minority Over-sampling Technique) to balance the dataset and improve model performance on minority classes.
+* **Feature Selection:** Utilize advanced feature selection methods to identify and retain the most impactful variables, potentially enhancing model efficiency and accuracy.
